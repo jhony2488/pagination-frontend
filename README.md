@@ -1,8 +1,8 @@
 <h1 align="center" id="vuttr">
-   VUTTR
+   pagination-front-end(Paginação no front end)
 </h1>
 
-<p align="center">🚀 VUTTR é um simples repositório para gerenciar ferramentas com seus respectivos nomes, links, descrições e tags</p>
+<p align="center">🚀 pagination-front-end é uma biblioteca voltada para realização de paginação no front end</p>
 
 <h2 id="tabela-de-conteudo">Tabela de conteúdos</h2>
 <!--ts-->
@@ -13,15 +13,9 @@
 
 - [Status do projeto](#----vuttr--em-construção--)
 
-- [Features](#----features)
-
 - [Como usar](#como-usar)
 
-  - [Pre Requisitos](#pré-requisitos)
-
   - [Instalação](#instalação)
-
-  - [Rodando a API](#-rodando-a-api)
 
 - [Testes](#-testes)
 
@@ -35,37 +29,10 @@
 <!--te-->
 
 <h2  id="status-projeto">  
-	🚧  VUTTR Back End 🚀 Concluido
+	🚧  pagination-front-end 🚀 Concluido
 </h2>
-
-<h2  id="features">  
-  Features
-</h2>
-
-- [x] Desenvolver e realizar os testes
-- [x] Cadastro de usuário
-- [x] Pegar dados de um unico usuario
-- [x] Alterar dados de usuário
-- [x] Deletar usuário
-- [x] Cadastro de Ferramentas
-- [x] Pegar dados das ferramentas de um unico usuario
-- [x] Alterar dados das ferramentas de um unico usuario
-- [x] Deletar dados das ferramentas de um unico usuario
-- [x] Cadastro de Tags
-- [x] Pegar dados das tags
-- [x] Alterar dados das tags
-- [x] Deletar tags
-- [x] cadastro de usuario administrador
-- [x] Admninistrador pegar dados de um unico usuario
-- [x] Admninistrador pegar dados de todos os usuarios
 
 <h2>Como usar</h2>
-
-<h3>Pré-requisitos</h3>
-
-Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [MySQL](https://www.mysql.com/).
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
 <h3 id="instalacao">Instalação</h3>
 
@@ -83,14 +50,6 @@ $ npm install || yarn add
 
 <h3 id="rodando-api">🎲 Rodando a API em modo de desenvolvimentor</h3>
 
-#### Instale o Node.js atravez do link abaixo caso ainda não o tenha instalado
-
-- [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
-
-#### Instale o MSQL atravez do link abaixo caso ainda não o tenha instalado
-
-- [https://www.mysql.com/downloads/](https://www.mysql.com/downloads/)
-
 ```bash
 # Execute o mysql no seu terminal/CMD
 $  mysql -h localhost -u root -p
@@ -104,59 +63,16 @@ $ npm run dev || yarn dev
 # O servidor inciará na porta:3000 - acesse <http://localhost:3000>
 ```
 
-<h3 id="rodando-api">🎲 Rodando a API em modo de produção </h3>
-
-#### Instale o Node.js atravez do link abaixo caso ainda não o tenha instalado
-
-- [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
-
-#### Instale o MySQL atravez do link abaixo caso ainda não o tenha instalado
-
-- [https://www.mysql.com/downloads/](https://www.mysql.com/downloads/)
-
-```bash
-# Execute o mysql no seu terminal/CMD
-$  mysql -h localhost -u root -p
-
-# Crie um banco de dados chamado vuttr no MySQL
-$ CREATE DATABASE vuttr;
-
-# Execute o build aplicação
-$ npm run build || yarn build
-
-# Execute a aplicação em modo de desenvolvimento
-$ npm run start || yarn start
-
-# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
-```
-
 <h2 id="tests">🛠 Testes</h2>
 
-### Instale o Node.js atravez do link abaixo caso ainda não o tenha instalado
-
-- [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
-
-### Instale o MySQL atravez do link abaixo caso ainda não o tenha instalado
-
-- [https://www.mysql.com/downloads/](https://www.mysql.com/downloads/)
-
 ```bash
-# Execute o mysql no seu terminal/CMD
-$  mysql -h localhost -u root -p
-
-# Crie um banco de dados chamado vuttr_test no MySQL
-$ CREATE DATABASE vuttr_test;
-
 # Executar os testes
 $ npm run test || yarn test
-
-# Executar testes de estresse na API
-$ npm run test-stress || yarn test-stress
 
 ```
 
 <h2 id="app-demo">  
-  Documentação da aplicação
+  Documentação de uso
 </h2>
 
 ```bash
@@ -166,24 +82,15 @@ $ npm run documentation || yarn documentation
 # O servidor inciará na porta:3000 - acesse a documentação <http://localhost:3000/documentation/>
 ```
 
-### Acesse a documentação da localmente
-
-- [http://localhost:3000/documentation/](http://localhost:3000/documentation/)
-
 <h2 id="tecnologias">🛠 Tecnologias</h2>
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Node.js](https://nodejs.org/en/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Express.js](https://expressjs.com/pt-br/)
-- [Sequelize](https://sequelize.org/)
-- [Sequelize-cli](https://www.npmjs.com/package/sequelize-cli)
 - [Jest](https://jestjs.io/)
-- [JWT](https://jwt.io/)
 - [Eslint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
-- [MySQL](https://www.mysql.com/)
 
 <h2 id="autor" align="center">Autor</h2>
 
