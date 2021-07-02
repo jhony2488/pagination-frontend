@@ -1,6 +1,6 @@
-<h1 align="center" id="vuttr">
-   pagination-front-end(Paginação no front end)
-</h1>
+
+# pagination-front-end(Paginação no front end)
+
 
 <p align="center">🚀 pagination-front-end é uma biblioteca voltada para realização de paginação no front end</p>
 
@@ -10,8 +10,6 @@
 - [Sobre](#---vuttr)
 
 - [Tabela de Conteudo](#tabela-de-conteudo)
-
-- [Status do projeto](#----vuttr--em-construção--)
 
 - [Como usar](#como-usar)
 
@@ -28,13 +26,17 @@
 - [Licença](#licença)
 <!--te-->
 
-<h2  id="status-projeto">  
-	🚧  pagination-front-end 🚀 Concluido
-</h2>
-
 <h2>Como usar</h2>
 
 <h3 id="instalacao">Instalação</h3>
+
+```bash
+# Instalação
+$ npm i pagination-front-end || yarn add pagination-front-end
+
+```
+
+<h3 id="instalacao">Instalação baixando o repositório</h3>
 
 ```bash
 # Clone este repositório
@@ -48,38 +50,12 @@ $ npm install || yarn add
 
 ```
 
-<h3 id="rodando-api">🎲 Rodando a API em modo de desenvolvimentor</h3>
-
-```bash
-# Execute o mysql no seu terminal/CMD
-$  mysql -h localhost -u root -p
-
-# Crie um banco de dados chamado vuttr_development no MySQL
-$ CREATE DATABASE vuttr_development;
-
-# Execute a aplicação em modo de desenvolvimento
-$ npm run dev || yarn dev
-
-# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
-```
-
 <h2 id="tests">🛠 Testes</h2>
 
 ```bash
 # Executar os testes
 $ npm run test || yarn test
 
-```
-
-<h2 id="app-demo">  
-  Documentação de uso
-</h2>
-
-```bash
-#  Executar o build da documentação caso ja esteja com a aplicação rodando com o docker , basta apenas acessar a URL abaixo
-$ npm run documentation || yarn documentation
-
-# O servidor inciará na porta:3000 - acesse a documentação <http://localhost:3000/documentation/>
 ```
 
 <h2 id="tecnologias">🛠 Tecnologias</h2>
