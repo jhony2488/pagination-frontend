@@ -62,8 +62,6 @@ class Filters {
     }
     // retorna o objeto com todas as propriedades exigidas paraa visualização
     // return object with all pager properties required by the view
-
-    console.log(pages.length)
     return {
       AllItems,
       currentPage,
