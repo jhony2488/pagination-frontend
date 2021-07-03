@@ -1,7 +1,7 @@
 {
   "name": "pagination-front-end",
   "version": "1.0.1",
-  "description": "",
+  "description": "pagination-front-end é uma biblioteca voltada para realização de paginação no front end( pagination-front-end is a front-end paging library)",
   "main": "./dist/index.js",
   "scripts": {
     "test": "NODE_ENV=test jest --detectOpenHandles",
