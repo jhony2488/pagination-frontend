@@ -53,7 +53,7 @@ $ npm install || yarn add
 <h3 id="uso">Uso(Use)</h3>
 
 ```js
-const Pagination = require('pagination-front-end')
+const Pagination = require('pagination-front-end')// or import Pagination from 'pagination-front-end' in typescript
 
 const drones = [
   {
