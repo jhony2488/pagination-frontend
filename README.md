@@ -50,7 +50,7 @@ $ npm install || yarn add
 
 ```
 
-<h3 id="uso">Uso</h3>
+<h3 id="uso">Uso(Use)</h3>
 
 ```js
 const Pagination = require('pagination-front-end')
