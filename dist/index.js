@@ -7,8 +7,15 @@ exports.default = void 0;
 
 class Filters {
   pagination(items, currentPage = 1, pageSize = 20) {
-    const AllItems = items.length;
-    const maxPages = Math.round(items.length / pageSize); // calcula o total de páginas
+    let AllItems;
+
+    if (items == null || items == undefined) {
+      AllItems = 0;
+    } else {
+      AllItems = items.length;
+    }
+
+    const maxPages = Math.round(AllItems / pageSize); // calcula o total de páginas
     // calculate total pages
 
     let allPages = Math.ceil(AllItems / pageSize); // garante que a página atual não esteja fora do intervalo
@@ -57,15 +64,22 @@ class Filters {
     let contentItems = [];
 
     if (currentPage == 1) {
-      contentItems = items.slice(0, pageSize);
+      if (items == null || items == undefined) {
+        contentItems = [];
+      } else {
+        contentItems = items.slice(0, pageSize);
+      }
     } else {
-      const pageCall = currentPage - 1;
-      contentItems = items.slice(pageSize * pageCall, pageSize + pageSize * pageCall);
+      if (items == null || items == undefined) {
+        contentItems = [];
+      } else {
+        const pageCall = currentPage - 1;
+        contentItems = items.slice(pageSize * pageCall, pageSize + pageSize * pageCall);
+      }
     } // retorna o objeto com todas as propriedades exigidas paraa visualização
     // return object with all pager properties required by the view
 
 
-    console.log(pages.length);
     return {
       AllItems,
       currentPage,
