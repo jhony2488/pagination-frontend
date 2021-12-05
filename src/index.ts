@@ -1,7 +1,12 @@
 class Filters {
   pagination(items: any[], currentPage: number = 1, pageSize: number = 20) {
-    const AllItems: number = items.length
-    const maxPages: number = Math.round(items.length / pageSize)
+    let AllItems: number
+    if (items == null || items == undefined) {
+      AllItems = 0
+    } else {
+      AllItems = items.length
+    }
+    const maxPages: number = Math.round(AllItems / pageSize)
 
     // calcula o total de páginas
     // calculate total pages
@@ -45,20 +50,28 @@ class Filters {
     // cria um array de páginas para repetir no controle de paginas
     // create an array of pages to ng-repeat in the pager control
     let pages = Array.from(Array(endPage + 1 - startPage).keys()).map(
-      (i) => startPage + i
+      i => startPage + i
     )
 
     //realiza a paginação em si dos itens
     // realiza uma paginação em si dos itens
     let contentItems: any[] = []
     if (currentPage == 1) {
-      contentItems = items.slice(0, pageSize)
+      if (items == null || items == undefined) {
+        contentItems = []
+      } else {
+        contentItems = items.slice(0, pageSize)
+      }
     } else {
-      const pageCall: number = currentPage - 1
-      contentItems = items.slice(
-        pageSize * pageCall,
-        pageSize + pageSize * pageCall
-      )
+      if (items == null || items == undefined) {
+        contentItems = []
+      } else {
+        const pageCall: number = currentPage - 1
+        contentItems = items.slice(
+          pageSize * pageCall,
+          pageSize + pageSize * pageCall
+        )
+      }
     }
     // retorna o objeto com todas as propriedades exigidas paraa visualização
     // return object with all pager properties required by the view
