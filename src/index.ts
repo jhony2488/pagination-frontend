@@ -1,93 +1,51 @@
-class Filters {
-  pagination(items: any[], currentPage: number = 1, pageSize: number = 20) {
-    let AllItems: number
-    if (items == null || items == undefined) {
-      AllItems = 0
-    } else {
-      AllItems = items.length
-    }
-    const maxPages: number = Math.round(AllItems / pageSize)
+import { indiceCalculation,calculationStartPageAndEndPage, filterPagination,calculationPages } from './utils';
 
-    // calcula o total de páginas
-    // calculate total pages
-    let allPages: number = Math.ceil(AllItems / pageSize)
+const pagination = (
+  items: any[] | null,
+  currentPage: number = 1,
+  pageSize: number = 20
+) => {
+  let AllItems: number = items == null || items == undefined ? 0 : items.length;
 
-    // garante que a página atual não esteja fora do intervalo
-    // ensure current page isn't out of range
-    if (currentPage < 1) {
-      currentPage = 1
-    } else if (currentPage > allPages) {
-      currentPage = allPages
-    }
+  const { maxPages,allPages } = calculationPages(AllItems,pageSize);
 
-    let startPage: number, endPage: number
-    if (allPages <= maxPages) {
-      // total de páginas menor que o máximo, então mostra todas as páginas
-      // all pages less than max so show all pages
-      startPage = 1
-      endPage = allPages
-    } else {
-      // todas as páginas acima do máximo, calcula as páginas inicial e final
-      // all pages more than max so calculate start and end pages
-      let maxPagesBeforeCurrentPage: number = Math.floor(maxPages / 2)
-      let maxPagesAfterCurrentPage: number = Math.ceil(maxPages / 2) - 1
-      if (currentPage <= maxPagesBeforeCurrentPage) {
-        startPage = 1
-        endPage = maxPages
-      } else if (currentPage + maxPagesAfterCurrentPage >= allPages) {
-        startPage = allPages - maxPages + 1
-        endPage = allPages
-      } else {
-        startPage = currentPage - maxPagesBeforeCurrentPage
-        endPage = currentPage + maxPagesAfterCurrentPage
-      }
-    }
-    // calcula os índices de item inicial e final
-    // calculate start and end item indexes
-    let startIndex: number = (currentPage - 1) * pageSize
-    let endIndex: number = Math.min(startIndex + pageSize - 1, AllItems - 1)
+  const validationCurrentPageBiggerThanNumberAllPages = currentPage > allPages;
 
-    // cria um array de páginas para repetir no controle de paginas
-    // create an array of pages to ng-repeat in the pager control
-    let pages = Array.from(Array(endPage + 1 - startPage).keys()).map(
-      i => startPage + i
-    )
+  const validationCurrentPageBiggerThanNumberOne = currentPage < 1;
 
-    //realiza a paginação em si dos itens
-    // realiza uma paginação em si dos itens
-    let contentItems: any[] = []
-    if (currentPage == 1) {
-      if (items == null || items == undefined) {
-        contentItems = []
-      } else {
-        contentItems = items.slice(0, pageSize)
-      }
-    } else {
-      if (items == null || items == undefined) {
-        contentItems = []
-      } else {
-        const pageCall: number = currentPage - 1
-        contentItems = items.slice(
-          pageSize * pageCall,
-          pageSize + pageSize * pageCall
-        )
-      }
-    }
-    // retorna o objeto com todas as propriedades exigidas paraa visualização
-    // return object with all pager properties required by the view
-    return {
-      AllItems,
-      currentPage,
-      pageSize,
-      allPages: allPages !== pages.length ? pages.length : allPages,
-      startPage,
-      endPage,
-      startIndex,
-      endIndex,
-      pages,
-      items: contentItems,
-    }
-  }
+  // garante que a página atual não esteja fora do intervalo
+  // ensure current page isn't out of range
+
+  const verifyCurrentPage = validationCurrentPageBiggerThanNumberOne ? 1 : validationCurrentPageBiggerThanNumberAllPages ? allPages : currentPage;
+
+  const { startPage, endPage} = calculationStartPageAndEndPage(allPages,maxPages,currentPage,);
+
+  const { endIndex, pages,startIndex } = indiceCalculation(
+    pageSize,
+    AllItems,
+    verifyCurrentPage,
+    startPage,
+    endPage
+  );
+
+  const verifyAllPages= allPages !== pages.length ? pages.length : allPages;
+
+  const { contentItems } = filterPagination(items, pageSize,verifyCurrentPage,);
+
+  // retorna o objeto com todas as propriedades exigidas paraa visualização
+  // return object with all pager properties required by the view
+  return {
+    AllItems,
+    currentPage: verifyCurrentPage,
+    pageSize,
+    allPages: verifyAllPages,
+    startPage,
+    endPage,
+    startIndex,
+    endIndex,
+    pages,
+    items: contentItems,
+  };
 }
 
-export default new Filters()
+export default pagination;
