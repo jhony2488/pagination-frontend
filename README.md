@@ -53,7 +53,7 @@ $ npm install || yarn add
 <h3 id="uso">Uso(Use)</h3>
 
 ```js
-const Pagination = require('pagination-front-end')// or import Pagination from 'pagination-front-end' in typescript
+const pagination = require('pagination-front-end'); // or import pagination from 'pagination-front-end' in typescript
 
 const drones = [
   {
@@ -188,12 +188,12 @@ const drones = [
     status: 'repair',
     fly: 90,
   },
-]
+];
 // Pagination.pagination(items: any[], currentPage: number = 1, pageSize: number = 20) 
-const paginationPage1= Pagination.pagination(drones, 1, 5)
+const paginationPage1= pagination(drones, 1, 5);
 
 // Pagination.pagination(items: any[], currentPage: number = 1, pageSize: number = 20) 
-const paginationPage2= Pagination.pagination(drones, 2, 5)
+const paginationPage2= pagination(drones, 2, 5);
 
 console.log(paginationPage1)
 /*
@@ -493,18 +493,15 @@ English: The following tools were used in building this library:
 <div align="center">
 
 <a href="https://jhonyaraujo.netlify.app/">
- <img style="border-radius: 50%;" src="https://raw.githubusercontent.com/jhony2488/images/master/perfil.jpg" width="200px;" alt="Jhonata Vinicius"/>
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/52162636?s=96&v=4" width="200px;" alt="Jhonata Vinicius"/>
  <br />
  <h2>Jhonata Vinicius Da Silva Araujo(Jhony Araujo) </h2></a>
 
 <p>Feito por Jhonata Vinicius 👋🏽 Entre em contato!(Made by Jhonata Vinicius 👋🏽 Get in touch!)</p>
 
-<a href="https://twitter.com/JhonyAraujoDev" align="center"><img src="https://raw.githubusercontent.com/jhony2488/images/master/twitter.png" height="60px" width="60px" /></a>
 <a href="https://www.linkedin.com/in/jhonatavinicius2488/"><img src="https://raw.githubusercontent.com/jhony2488/images/master/linkedin.png" style="margin-left:10px;" height="60px" width="60px" /></a>
-<a href="https://join.skype.com/invite/v9azzgZrhpWh"><img src="https://raw.githubusercontent.com/jhony2488/images/master/skype%20(1).png" height="60px" width="60px" /></a>
 <a href="https://www.facebook.com/jhony.araujo.dev/"><img src="https://raw.githubusercontent.com/jhony2488/images/master/facebook%20(1).png" height="60px" width="60px" /></a>
-<a href="https://www.instagram.com/jhonyaraujo_oficial/"><img src="https://raw.githubusercontent.com/jhony2488/images/master/instagram.png" height="60px" width="60px" /></a>
-<a href="https://api.whatsapp.com/send?phone=5581983708177"><img src="https://raw.githubusercontent.com/jhony2488/images/master/whatsapp.png" height="60px" width="60px" /></a>
+<a href="https://www.instagram.com/jhony.araujo.oficial/"><img src="https://raw.githubusercontent.com/jhony2488/images/master/instagram.png" height="60px" width="60px" /></a>
 <a href="https://www.behance.net/jhonyaraujo"><img src="https://raw.githubusercontent.com/jhony2488/images/master/behance.png" height="60px" width="60px" /></a>
 
 </div>
