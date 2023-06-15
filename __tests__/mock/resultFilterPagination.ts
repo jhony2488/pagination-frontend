@@ -1,0 +1,62 @@
+const result = {
+  contentItems: [
+    {
+      address: '7016 Shelley Circle',
+      average_speed: 9.2,
+      battery: 51,
+      fly: 35,
+      id: 8,
+      image: 'https://robohash.org/quiavoluptasut.png?size=50x50&set=set1',
+      max_speed: 3.3,
+      name: 'Rosene',
+      status: 'charging',
+    },
+    {
+      address: '63991 Rigney Point',
+      average_speed: 5,
+      battery: 21,
+      fly: 0,
+      id: 9,
+      image:
+        'https://robohash.org/nonoccaecatitemporibus.bmp?size=50x50&set=set1',
+      max_speed: 40.5,
+      name: 'Franklin',
+      status: 'charging',
+    },
+    {
+      address: '3080 Ludington Alley',
+      average_speed: 15.7,
+      battery: 73,
+      fly: 18,
+      id: 10,
+      image: 'https://robohash.org/doloresnonsit.bmp?size=50x50&set=set1',
+      max_speed: 27.3,
+      name: 'Lynel',
+      status: 'success',
+    },
+    {
+      address: '15295 Crowley Lane',
+      average_speed: 14,
+      battery: 86,
+      fly: 66,
+      id: 11,
+      image: 'https://robohash.org/adautemenim.bmp?size=50x50&set=set1',
+      max_speed: 37.5,
+      name: 'Gunar',
+      status: 'flying',
+    },
+    {
+      address: '064 Delaware Lane',
+      average_speed: 9.1,
+      battery: 51,
+      fly: 43,
+      id: 12,
+      image: 'https://robohash.org/quisdoloreearum.jpg?size=50x50&set=set1',
+      max_speed: 3.2,
+      name: 'Kasey',
+      status: 'repair',
+    },
+  ],
+}
+
+export default result;
