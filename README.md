@@ -488,7 +488,7 @@ English: The following tools were used in building this library:
 - [Eslint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 
-Obs: A build para javascript de publicaçã0o e executada automaticamente.
+Obs: A build para javascript de publicação e executada automaticamente.
 
 <h2 id="autor" align="center">Autor(Author)</h2>
 
