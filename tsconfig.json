@@ -26,8 +26,9 @@
     "paths": {}
   },
   "include": [
-    "./src/*"
-, "src/utils/indiceCalculation.ts"  ],
+    "./src/*",
+    "src/utils/*"
+  ],
   "exclude": [
     "__tests__/****"
   ]

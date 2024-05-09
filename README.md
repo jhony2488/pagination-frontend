@@ -40,7 +40,7 @@ $ npm i pagination-front-end || yarn add pagination-front-end
 
 ```bash
 # Clone este repositório(Clone this repository)
-$ git clone <https://github.com/jhony2488/pagination-frontend>
+$ git clone https://github.com/jhony2488/pagination-frontend
 
 # Acesse a pasta do projeto no terminal/cmd(Access the project folder in the terminal/cmd)
 $ cd pagination-frontend
@@ -501,10 +501,18 @@ Obs: A build para javascript de publicaçã0o e executada automaticamente.
 
 <p>Feito por Jhonata Vinicius 👋🏽 Entre em contato!(Made by Jhonata Vinicius 👋🏽 Get in touch!)</p>
 
-<a href="https://www.linkedin.com/in/jhonatavinicius2488/"><img src="https://raw.githubusercontent.com/jhony2488/images/master/linkedin.png" style="margin-left:10px;" height="60px" width="60px" /></a>
-<a href="https://www.facebook.com/jhony.araujo.dev/"><img src="https://raw.githubusercontent.com/jhony2488/images/master/facebook%20(1).png" height="60px" width="60px" /></a>
-<a href="https://www.instagram.com/jhony.araujo.oficial/"><img src="https://raw.githubusercontent.com/jhony2488/images/master/instagram.png" height="60px" width="60px" /></a>
-<a href="https://www.behance.net/jhonyaraujo"><img src="https://raw.githubusercontent.com/jhony2488/images/master/behance.png" height="60px" width="60px" /></a>
+<a href="https://www.linkedin.com/in/jhonyaraujo/" target="_blank">
+  <img align="center" src="https://img.shields.io/badge/LinkedIn-05122A?style=for-the-badge&logo=linkedin" alt="linkedin"/>
+</a> 
+<a href="https://www.instagram.com/jhony.dev.oficial/" target="_blank">
+  <img align="center" src="https://img.shields.io/badge/Instagram-05122A?style=for-the-badge&logo=instagram" alt="instagram"/>
+</a> 
+  <a href="https://dev.to/jhonyaraujooficial" target="_blank">
+  <img align="center" src="https://img.shields.io/badge/dev.to-05122A?style=for-the-badge&logo=devdotto&logoColor=white" alt="My Blog"/>
+</a>
+  <a href="https://www.behance.net/jhonyaraujoelemental" target="_blank">
+  <img align="center" src="https://img.shields.io/badge/-Behance-05122A?style=for-the-badge&logo=behance&logoColor=white" alt="My behance profile"/>
+</a>
 
 </div>
 
